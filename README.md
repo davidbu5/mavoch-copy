@@ -1,2 +1,1 @@
-"# mavoch" 
-"# mavoch-copy" 
+# mavoch-copy
