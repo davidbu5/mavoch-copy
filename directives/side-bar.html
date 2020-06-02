@@ -1,0 +1,11 @@
+<nav>
+    <ul role="navigation" class="side-bar" tabindex="0" accesskey="n" aria-label="{{alnavigationmenu}}">
+        <li role="listitem" ng-repeat="curr in options[language.id-1] track by $index" class="option" 
+            ng-class="isActivated(curr.url)" aria-selected="{{isActivated(curr.url) != undefined}}"
+             >
+            <a class="option-link" href="#/{{ curr.url }}">
+                <i ng-if="curr.icon" class="fa fa-{{curr.icon}}" alt="{{curr.iconalt}}"></i>{{curr.caption}}
+            </a>
+        </li>
+    </ul>
+</nav>

@@ -1,0 +1,20 @@
+<div dir="rtl" class="cover-popup-container no-select" aria-label="{{alimageviewer}}"
+    onkeyup="if (event.keyCode == 27) {
+        $(this).prev().remove();$(this).remove()
+    }">
+    <button class="navigate-arrow link-cursor" ng-click="prevPic()" id="prevPicButton" tabindex="0" autofocus aria-label="{{alprevpic}} {{alimageviewer}}"><</button>
+
+
+    <img ng-src="{{ images[set][index].src }}" alt="{{ getAlt(set, index) }}" id="expandedPictureElement" class="gallery-pic-expand" />
+    <button class="navigate-arrow link-cursor" id="nextPicButton" ng-click="nextPic()" tabindex="0" aria-label="{{alnextpic}}">></button>
+    <button class="exit-button no-select link-cursor" id="exitImageDisplayButton" aria-label="{{alexitpic}}"
+            onclick="$('div.content-view').focus();
+    $('div.content-container').scrollTop(0); $(this).parent().prev().remove(); $(this).parent().remove()"
+            onkeyup="if (event.keyCode == 13) {
+        this.click();
+    }"
+            tabindex="0">
+        X
+    </button>
+    
+</div>

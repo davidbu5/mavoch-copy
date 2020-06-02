@@ -1,0 +1,8 @@
+<div>
+    <div class="article gallery">
+        <div ng-hide="cover" tabindex="0" ng-repeat="curr in images[set] track by $index" aria-label="{{ getAlt(set, $index) }} {{ alpic }}" aria-expanded="{{ isExpanded($index) }}"
+             class="gallery-pic link-cursor" ng-click="expand(set, $index)">
+            <img ng-src="{{ curr.src }}" class="link-cursor" alt="{{ getAlt(set, $index) }}">
+        </div>
+    </div>
+</div>

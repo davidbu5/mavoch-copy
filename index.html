@@ -1,0 +1,50 @@
+﻿<html dir="rtl" ng-app="Site">
+
+<head>
+    <title>מבוך בעמק - Mavoch Ba'emek</title>
+    <link rel="stylesheet" href="sheet.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="app.js"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <meta charset="utf-8">
+    <meta name="description" content="האתר של מבוך בעמק.">
+    <meta name="keywords" content="מבוך בעמק,מבוך,מבוך אתגרי,אטרקציה,אטרקציות,מבוך השיחים,מבוך החיטה,מבוך החבלים,מבוך התירס,צפון,אטרקציות בצפון,לינת שטח,קמפינג,קבוצות">
+</head>
+
+<body ng-controller="siteController">
+    <div class="container">
+        <header>
+            <div class="header no-select">
+                <h1 class="header-title" tabindex="0">{{title}}</h1>
+                <img class="logo-pic" src="images/logo.JPG" alt="{{allogo}}">
+            </div>
+        </header>
+        <main>
+            <p tabindex="0" class="hidden-text">{{help}}</p>
+            <div class="site-container">
+                <article>
+                    <div class="content-container">
+                        <div class="content">
+                            <div class="content-view" enter-and-focus ng-view tabindex="0" accesskey="p"></div>
+                        </div>
+                    </div>
+                </article>
+                <aside>
+                    <div class="side-bar-container no-select">
+                        <side-bar></side-bar>
+                        <thumbnails></thumbnails>
+                    </div>
+                </aside>
+            </div>
+        </main>
+    </div>
+    <bottom-text tabindex="0" accesskey="l" aria-label="{{albottomlang}}"></bottom-text>
+</body>
+
+</html>
